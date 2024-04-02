@@ -89,3 +89,11 @@ Pull requests are welcome. To install for development:
     ```
 
 When making changes to the `.pyx` extension files, you'll need to run `python setup.py cythonize` in order to produce the extension `.c` files before running `pip install -e .`.
+
+## OpenMP on MacOS
+
+1. Install libomp with `brew install libomp`
+2. Install gcc with `brew install gcc`
+3. Install lightfm with gcc that you installed with brew
+  - `CC=gcc-13 pip install -e .`
+  - Brew names the gcc binary with gcc-{VERSION}, to check what gcc version you installed run `brew info gcc`
